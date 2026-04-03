@@ -9,13 +9,13 @@ Een demo ASP.NET Core WebAPI die willekeurige dobbelsteenworpen (1-6) retourneer
 - ❌ Instelbaar foutpercentage (standaard: 5%)
 - 📊 Volledige OpenTelemetry instrumentatie (traces, metrics, logs)
 - 🔍 Integratie met LGTM observability stack
-- 🚀 Verkeergeneratiescript inbegrepen
+- 🚀 SCript voor het genereren van verkeer inbegrepen
 
 ## Vereisten
 
 - [.NET 10.0 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop)
-- PowerShell (voor het verkeergeneratiescript)
+- PowerShell (voor het genereren van verkeer)
 
 
 ## Opdrachten
@@ -53,17 +53,6 @@ Bewerk [appsettings.json](src/appsettings.json) om het gedrag aan te passen:
 - **Hoger foutpercentage:** Verander `ErrorRate` naar `0.20` (20%)
 - **Geen fouten:** Stel `ErrorRate` in op `0`
 
-### Omgevingsvariabelen
-
-Je kunt instellingen ook overschrijven via omgevingsvariabelen:
-
-```powershell
-$env:ApiSettings__MinDelayMs = "100"
-$env:ApiSettings__MaxDelayMs = "500"
-$env:ApiSettings__ErrorRate = "0.10"
-dotnet run --project src
-```
-
 ## Services stoppen
 
 ### Stop de ASP.NET Core API
@@ -77,8 +66,6 @@ docker stop lgtm
 ```
 
 De `--rm` vlag verwijdert de container automatisch na het stoppen.
-
-
 
 ## Hoe het werkt
 
