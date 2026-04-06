@@ -13,7 +13,7 @@
 
 1. Ga in Grafana naar **Explore**
 2. Selecteer **Tempo** als databron
-3. Zoek naar traces van de `ObservabilityDemo` service
+3. Zoek naar traces van de `DiceScore.API` service
 4. Je ziet:
    - Verzoekduur
    - Dobbelsteenresultaten

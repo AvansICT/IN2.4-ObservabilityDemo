@@ -24,13 +24,13 @@ docker ps --filter name=lgtm
 Open een nieuw terminal en start de API vanuit de `src` map:
 
 ```powershell
-dotnet run --project src
+dotnet run --project DiceScore.API
 ```
 
 Of met een specifieke URL:
 
 ```powershell
-dotnet run --project src --urls "http://localhost:5000"
+dotnet run --project DiceScore.API --urls "http://localhost:5000"
 ```
 
 De API start en luistert op de ingestelde poorten. Je ziet uitvoer die aangeeft:

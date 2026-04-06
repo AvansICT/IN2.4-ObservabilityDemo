@@ -25,13 +25,14 @@ Een demo ASP.NET Core WebAPI die willekeurige dobbelsteenworpen (1-6) retourneer
 | [Opdracht 1](docs/ASSIGNMENT1.md) | Start de LGTM Docker container |
 | [Opdracht 2](docs/ASSIGNMENT2.md) | Toegang tot de observability stack |
 | [Opdracht 3](docs/ASSIGNMENT3.md) | Grafana dashboard genereren via een LLM |
+| [Opdracht 4](docs/ASSIGNMENT4.md) | Gedistribueerde tracing met twee services |
 
 
 ## Configuratie
 
 ### API-instellingen
 
-Bewerk [appsettings.json](src/appsettings.json) om het gedrag aan te passen:
+Bewerk [appsettings.json](DiceScore.API/appsettings.json) om het gedrag aan te passen:
 
 ```json
 {
@@ -117,7 +118,7 @@ Elk verzoek bevat aangepaste OpenTelemetry-tags:
 
 ### Hoog foutpercentage
 
-- Controleer `ApiSettings:ErrorRate` in `src/appsettings.json`
+- Controleer `ApiSettings:ErrorRate` in `DiceScore.API/appsettings.json`
 - Zorg dat het is ingesteld op `0.05` (5%) en niet `0.5` (50%)
 
 ## Geavanceerd gebruik
@@ -137,7 +138,7 @@ rate(http_server_request_duration_seconds_count{http_response_status_code="500"}
 ```
 
 **Tempo query:**
-- Zoek op servicenaam: `ObservabilityDemo`
+- Zoek op servicenaam: `DiceScore.API`
 - Filter op duur: `> 500ms`
 - Filter op status: `status=error`
 

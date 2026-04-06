@@ -10,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
 // Configure OpenTelemetry
-var serviceName = "ObservabilityDemo";
+var serviceName = "DiceScore.API";
 var serviceVersion = "1.0.0";
 
 builder.Services.AddOpenTelemetry()
